@@ -1,0 +1,280 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/regular.css">
+   
+    <style>
+        .sp{
+            display: block;
+            width: 65px;
+            height: 65px;
+            background-color: darkmagenta;
+            border-radius: 100px;
+            position: absolute;
+            right: 20px ;
+            bottom:20px;
+            z-index: 3;
+        }
+        .sp i{
+            font-size: 35px;
+            margin: 15px 17px;
+            color: white;
+        }
+        *{
+        margin: 0;
+        padding: 0;
+        box-sizing: border-box
+       }
+       body{
+           background-color: rgb(236, 234, 234);
+       }
+       section{
+        /* width: 30%; */
+        width: 65px;
+        height: 65px;
+        position: absolute;
+            right:  20px;
+            bottom: 20px;
+            border-radius: 100px;
+            overflow: hidden;
+       }
+       .sec{
+        animation-name: Show;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+       }
+       @keyframes Show{
+        0%{
+            width: 65px;
+            height: 65px;
+        }
+        100%{
+            width: 330px;
+            height: 540px;
+            border-radius: 0px;
+        }
+
+       }
+       header{
+        width: 100%;
+        height: 80px;
+        background-color: white;
+        display: flex;
+        border-top-right-radius: 10px;
+        border-top-left-radius: 10px;
+       }
+       header i{
+        font-size: 25px;
+        position: absolute;
+        right: 30px;
+        top: 25px;
+        
+       }
+       .colses{
+        animation-name: close;
+        animation-duration: 1s;
+        animation-fill-mode: both;
+       }
+       
+       @keyframes close{
+        0%{
+            width: 330px;
+            height: 540px;
+        }
+        100%{
+            width: 65px;
+            height: 65px;
+            border-radius: 100px;
+        }
+    }
+       header img{
+        width: 80px;
+        height: 80px;
+        border-radius: 50%;
+        padding: 12px;
+       }
+       .textherder{
+        display: block;
+        margin-top: 25px;
+       }
+       .textherder h6{
+        font-size: 18px;
+        font-weight: normal;
+       }
+       .textherder p{
+        /* font-size: 16px; */
+        color: rgb(71, 71, 71);
+       }
+       .-main {
+        width: 100%;
+        height: 350px;
+        overflow-y: scroll;
+        background-color: rgb(245, 243, 243);
+        display: block;
+        padding-top: 15px;
+        background-image: url('photo-1588414734732-660b07304ddb.jpg');
+        background-size: cover;
+       }
+       .-main h5{
+        width: 110px;
+        margin-left: 35%;
+        height: 25px;
+        text-align: center;
+        color: rgb(110, 109, 109);
+        border-radius: 50px;
+        padding:5px 5px 5px;
+        background-color: rgb(209, 206, 206);
+        margin-bottom: 15px;
+       }
+
+       .textrt {
+        width: 50%;
+        /* height: 50px; */
+        background-color: black;
+        float: right;
+        color: white;
+        margin: 5px 20px;
+        padding: 10px 10px;
+        clear: both;
+        border-top-right-radius:20px;
+        border-top-left-radius:20px ;
+        border-bottom-left-radius:20px ;
+       }
+       .textlf{
+        clear: both;
+        width: 50%;
+        /* height: 55px; */
+        background-color: white;
+        /* float: right; */
+        color: black;
+        margin: 5px 20px;
+        font-size: 18px;
+        padding: 10px 10px;
+        border-top-left-radius:20px;
+        border-top-right-radius:20px ;
+        border-bottom-right-radius:20px ;
+       }
+       /* .textlf p::before {
+        content: "";
+        width: 50px;
+        height: 40px;
+        background-color: aqua;
+        position: relative;
+        z-index: 3;
+} */
+       .textlf p{
+        padding: px 0px 5px ;
+       }
+       footer{
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        border-bottom-right-radius:20px ;
+        border-bottom-left-radius:20px ;
+        background-color: white;
+        padding: 10px 20px;
+       }
+       footer input{
+        width: 70%;
+        height: 30px;
+        border-radius: 50px;
+        border: none;
+        padding: 5px 15px;
+        box-shadow: 0px 0px 5px black;
+       }
+       footer p{
+        font-size: 20px;
+        padding-top: 5px;
+       }
+
+    </style>
+</head>
+<body>
+    <span class="sp">
+        <i class="fab fa-dashcube" aria-hidden="true"></i>
+    </span>
+    <section>
+        <header>
+            <img src="IMG_٢٠٢٣٠٧٠٤_٢٢٤٢٠١.jpg" alt="image">
+            <div class="textherder">
+                <h6>Ali Saeed</h6>
+                <p>Today at 12:56</p>
+            </div>
+            <div class="-colse"><i class="fa fa-times" aria-hidden="true"></i></div>
+        </header>
+        <main class="-main">
+            <h5>Today at 11:41</h5>
+            <div class="textrt">
+                <p>Hey,man! What`s up , Mr Stark?</p>
+            </div>
+            <div class="textlf">
+                <p>Kid, where`d come from?</p>
+            </div>
+            <div class="textrt">
+                <p>Hey,man!😂</p>
+            </div>
+            <div class="textlf">
+                <p>Kid, where`d come from?</p>
+            </div>
+            <div class="textrt">
+                <p>Hey,man! What`s up , Mr Stark?</p>
+            </div>
+            <div class="textlf">
+                <p>Kid, where`d 🤩</p>
+            </div>
+    
+        </main>
+        <footer>
+            <p><i class="fa fa-plus" aria-hidden="true"></i></p>
+            <p><i class="fa fa-camera" aria-hidden="true"></i></p>
+            <input type="text" id="mytext" placeholder="Typle your mesage here!">
+            <p id="prg"><i class="fa fa-arrow-right" aria-hidden="true"></i></p>
+        </footer>
+       </section>
+     <script>
+        $(document).ready(function() {
+          $('.sp').click(function() {
+            $('section').toggleClass('sec');
+            $('.sp').hide(500);
+          });
+          $('.-colse').click(function() {
+            $('section').toggleClass('colses');
+            $('.sp').show(500);
+          });
+      
+          document.getElementById('mytext').addEventListener('keypress', function(event) {
+            if (event.keyCode === 13) {
+              event.preventDefault(); // Prevent form submission
+              let inputText = this.value;
+              let textlf = document.createElement('div');
+              textlf.className = 'textlf';
+              let paragraph = document.createElement('p');
+              paragraph.textContent = inputText;
+              textlf.appendChild(paragraph);
+              let main = document.querySelector('.-main');
+              main.appendChild(textlf);
+              this.value = ''; // Clear the input field
+            }
+          });
+
+        $('#prg').click(function(){
+              let inputText = $('#mytext').val();
+              let textlf = document.createElement('div');
+              textlf.className = 'textlf';
+              let paragraph = document.createElement('p');
+              paragraph.textContent = inputText;
+              textlf.appendChild(paragraph);
+              let main = document.querySelector('.-main');
+              main.appendChild(textlf);
+              this.value = ''; 
+            })
+        });
+      </script>
+</body>
+</html>

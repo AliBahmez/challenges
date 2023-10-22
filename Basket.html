@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/regular.css">
+   
+    <style>
+        .mydiv{
+            width: 200px;
+            height: 50px;
+            position: relative;
+            left: 45%;
+            top: 300px;
+            /* background-color: aqua; */
+        }
+        .mydiv button{
+            width: 170px;
+            height: 50px;
+            background-color: white;
+            border: none;
+            box-shadow: 0 0 10px rgb(198, 197, 197);
+            border-radius: 10px;
+            font-size: 17px;
+        }
+        .span1{
+            /* display: block; */
+            width: 20px;
+            height: 20px;
+            background-color: green;
+            border-radius: 100px;
+            text-align: center;
+            font-size: 18px;
+            color: white;
+            position: absolute;
+            right: 25px;
+            top: -7px;
+        }
+        .fa-shopping-cart{
+            font-size: 35px;
+            position: absolute;
+            right: 20px;
+        }
+        .animate{
+            animation-name: move;
+            animation-duration: 2s;
+            animation-fill-mode: both;
+        }
+        @keyframes move{
+            0%{
+                transform: translateY(0px);
+            }
+            17%{
+                transform: translate(0px, -130px);
+
+            }
+            34%{
+                transform: translate(25px, -155px);
+            }
+            51%{
+                transform: translate(50px, -180px);
+
+            }
+            68%{
+                transform: translate(75px, -205px);
+
+            }
+            85%{
+                transform: translate(110px, -240px);
+
+            }
+            100%{
+                transform: translate(522px, -252px);
+
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="mydiv">
+    <button>New Add</button>
+    <span class="span1">1</span>
+</div>
+<i class="fa fa-shopping-cart" aria-hidden="true"></i>
+
+<script>
+    $(document).ready(function(){
+        $('.mydiv').click(function(){
+            $('.span1').toggleClass('animate')
+        })
+    })
+</script>
+</body>
+</html>

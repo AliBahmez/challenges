@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/fontawesome.min.css">
+    <link rel="stylesheet" href="fontawesome-v6.4.2/css/regular.css">
+    <script src="jquery-3.7.1.js"></script>
+    <style>
+        #contianer{
+            margin: 20% 0;
+            width: 300px;
+            height: 100px;
+            background-color: aqua;
+            padding-top: 20px;
+            border-radius: 10px;
+        }
+        #cont{
+            display: flex;
+            justify-content: space-around;
+            align-items: center;
+            margin: auto;
+            width: 200px;
+            height: 70px;
+            background-color: white;
+            cursor: pointer;
+            border-radius: 10px;
+        }
+        .heart{
+         z-index: 4;
+        transition: all 1s;
+        animation-name:heart1 ;
+        animation-duration: 1s;
+        animation-direction: alternate;
+        animation-fill-mode: both;
+        animation-iteration-count: 2;
+       } 
+       @keyframes heart1{
+        0%{
+            color: red;
+            padding: 10px 10px 10px 15px;
+        }
+        50%{
+            color: red;
+            padding: 10px 10px 10px 15px;
+        }
+        100%{
+            transform: scale(1.5);
+            color: red;
+            z-index: 4;
+            transition: all 1s;
+            padding: 10px 10px 10px 15px;
+        }
+       }
+       .fa-regular{
+        color: red;
+       }
+       .size{
+        font-size: 25px;
+       }
+    </style>
+</head>
+<body>
+    <div id="contianer">
+        <div id="cont">
+            <div class="aa1" id="aa" >
+                <i   class="fa-regular fa-heart"></i>
+            </div>
+            <p id="prg" class="size">like</p>
+            <h6 class="size">29</h6>
+        </div>
+    </div>
+    <script>
+        $(document).ready(function(){
+            $('#cont').click(function(){
+                $('#cont').animate({
+                    width:40,
+                    height:70,
+                    backgroundColor:'red',
+                },500)
+                $('#cont').animate({
+                    width:200,
+                    height:70,
+                    backgroundColor:'red',
+                },500)
+                $('.aa1').toggleClass('heart , fa fa-heart')
+                $('i').removeClass('fa-regular fa-heart')
+                $('#prg').html('linked');
+                $('h6').html('30')       
+                $('#prg').hide(500).show(500)
+                $('h6').hide(500).show(500)
+            })
+            
+
+            })
+        
+    </script>
+    <!-- <script>
+        $(document).ready(function(){
+            // $('h1:last-of-type').hide();
+            // $('p').hide();
+            // document.getElementsByTagName('h1')[0].innerHTML = "Hi"
+            // $('#cont').click(function(){
+                // $('h1:last-of-type').toggle(1000);
+                // alert('Hi')
+                // $('h1:last-of-type').toggle(1000 ,()=>{
+                // });
+
+            // })
+            
+
+        })
+    </script> -->
+</body>
+</html>
